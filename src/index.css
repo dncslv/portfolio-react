@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-ink-900 font-body antialiased;
+}
+
+::selection {
+  @apply bg-accent/20;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.eyebrow {
+  @apply font-mono text-xs tracking-wide text-accent uppercase;
+}
+
+.section-container {
+  @apply max-w-content mx-auto px-6 md:px-8;
+}
