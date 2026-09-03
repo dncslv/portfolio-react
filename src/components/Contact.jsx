@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 import { PROFILE } from "../data.js";
 
@@ -36,6 +37,36 @@ function resolveValue(key) {
 }
 
 export default function Contact() {
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
+  const formReady = Boolean(PROFILE.formEndpoint);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (!formReady) return;
+
+    const form = e.target;
+    const data = new FormData(form);
+    setStatus("sending");
+
+    try {
+      const res = await fetch(PROFILE.formEndpoint, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contact" className="bg-surface-soft border-t border-border">
       <div className="section-container py-20 grid md:grid-cols-2 gap-14">
@@ -72,8 +103,7 @@ export default function Contact() {
         </div>
 
         <form
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
+          onSubmit={handleSubmit}
           className="bg-white border border-border rounded-2xl shadow-card p-8 flex flex-col gap-5"
         >
           <label className="flex flex-col gap-1.5 text-sm text-ink-900/70">
@@ -103,15 +133,32 @@ export default function Contact() {
               className="rounded-md border border-border bg-surface-soft px-4 py-2.5 text-ink-900 focus:outline-none focus:border-accent resize-y"
             />
           </label>
+
           <button
             type="submit"
-            className="rounded-md bg-accent text-white font-semibold py-3 hover:bg-accent-dark transition-colors"
+            disabled={status === "sending" || !formReady}
+            className="rounded-md bg-accent text-white font-semibold py-3 hover:bg-accent-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {status === "sending" ? "Sending…" : "Send Message"}
           </button>
-          <p className="text-xs text-ink-900/35">
-            This form needs a free Formspree endpoint to work — see the README.
-          </p>
+
+          {status === "success" && (
+            <p className="text-sm text-green-600 font-medium">
+              Thanks! Your message was sent — I'll get back to you soon.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-sm text-red-600 font-medium">
+              Something went wrong sending your message. Please try again or
+              email me directly at {PROFILE.email}.
+            </p>
+          )}
+          {!formReady && (
+            <p className="text-xs text-ink-900/35">
+              Form isn't connected yet — add your Formspree endpoint to{" "}
+              <code>PROFILE.formEndpoint</code> in <code>src/data.js</code>.
+            </p>
+          )}
         </form>
       </div>
     </section>

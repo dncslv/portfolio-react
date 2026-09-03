@@ -29,6 +29,9 @@ export const PROFILE = {
     github: "https://github.com/dncslv",
   },
   resumeFile: "/resume/Danica-Rose-Salve-Resume.pdf",
+  // Paste your Formspree endpoint here, e.g. "https://formspree.io/f/mzebgjyw"
+  // Get one free at formspree.io — see the Contact section setup notes.
+  formEndpoint: "https://formspree.io/f/mzebgjyw",
 };
 
 /* ------------------------------------------------------------
