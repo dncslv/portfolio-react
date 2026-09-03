@@ -152,6 +152,7 @@ export default function Contact() {
               Something went wrong sending your message. Please try again or
               email me directly at {PROFILE.email}.
             </p>
+            
           )}
           {!formReady && (
             <p className="text-xs text-ink-900/35">
