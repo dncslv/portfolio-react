@@ -29,7 +29,7 @@ export default function Projects() {
       <div className="max-w-xl mb-10">
         <p className="eyebrow mb-3">03 · Projects</p>
         <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight">
-          Selected work
+          Projects
         </h2>
       </div>
 
