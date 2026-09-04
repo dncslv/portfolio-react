@@ -475,6 +475,48 @@ export const PROJECTS = [
 ------------------------------------------------------------ */
 export const CERTIFICATES = [
   {
+    title: "Business Analysis Basics",
+    image: "/images/certs/18.jpg",
+    date: "September 2026",
+    description: "Introduces the fundamental concepts of business analysis, including identifying business needs, analyzing requirements, and developing effective solutions to improve business processes.",
+    link: "",
+  },
+  {
+    title: "Get Started with SQL Analytics and BI on Databricks",
+    image: "/images/certs/17.jpg",
+    date: "September 2026",
+    description: "Introduces SQL-based data analytics and business intelligence using Databricks to query, analyze, and gain insights from data.",
+    link: "",
+  },
+  {
+    title: "Introduction to Digital Transformation with Google Cloud",
+    image: "/images/certs/16.jpg",
+    date: "September 2026",
+    description: "Explores the fundamentals of digital transformation and how Google Cloud technologies help organizations modernize processes and improve business operations.",
+    link: "",
+  },
+  {
+    title: "Innovating with Google Cloud AI",
+    image: "/images/certs/15.jpg",
+    date: "September 2026",
+    description: "Provides an introduction to how Google Cloud AI technologies can be used to develop innovative solutions and apply artificial intelligence to business problems.",
+    link: "",
+  },
+  {
+    title: "Power BI Data Modelling Basics Tutorial Course",
+    image: "/images/certs/14.jpg",
+    date: "September 2026",
+    description: "Introduces the fundamentals of data modeling in Power BI, including creating relationships and structuring data for effective analysis and visualization.",
+    link: "",
+  },
+  {
+    title: "Project Management",
+    image: "/images/certs/13.jpg",
+    date: "September 2026",
+    description: "Covers the fundamental principles of project management, including planning, organizing, executing, and monitoring projects effectively.",
+    link: "",
+  },
+  {
     title: "Azure SQL Database Architecture Course",
     image: "/images/certs/10.jpg",
     date: "September 2026",
