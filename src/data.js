@@ -475,6 +475,41 @@ export const PROJECTS = [
 ------------------------------------------------------------ */
 export const CERTIFICATES = [
   {
+    title: "Git Tutorial for Beginners",
+    image: "/images/certs/23.jpg",
+    date: "September 2026",
+    description: "Introduces Git basics for version control, code management, branching, and collaboration.",
+    link: "",
+  },
+  {
+    title: "CompTIA 220-1001 A+ Training Course",
+    image: "/images/certs/22.jpg",
+    date: "September 2026",
+    description: "Covers essential IT hardware, networking, troubleshooting, and technical support concepts for CompTIA A+ certification.",
+    link: "",
+  },
+  {
+    title: "Java Programming for Beginners",
+    image: "/images/certs/21.jpg",
+    date: "September 2026",
+    description: "Teaches the fundamentals of Java programming, including syntax, object-oriented concepts, and application development.",
+    link: "",
+  },
+  {
+    title: "Full Stack Development",
+    image: "/images/certs/20.jpg",
+    date: "September 2026",
+    description: "Introduces both front-end and back-end development for building complete web applications.",
+    link: "",
+  },
+  {
+    title: "Web Development for Beginners",
+    image: "/images/certs/19.jpg",
+    date: "September 2026",
+    description: "Covers the fundamentals of creating and developing websites using basic web technologies.",
+    link: "",
+  },
+  {
     title: "Business Analysis Basics",
     image: "/images/certs/18.jpg",
     date: "September 2026",
