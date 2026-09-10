@@ -641,7 +641,7 @@ export const CERTIFICATES = [
    INTERNSHIP EXPERIENCE
 ------------------------------------------------------------ */
 export const INTERNSHIP = {
-  role: "IT Support",
+  role: "IT Support & Admin Assistant",
   company: "School Division Office of Valenzuela — DepEd",
   address: "Pio Valenzuela St., Marulas, Valenzuela City",
   industry: "Department of Education",
